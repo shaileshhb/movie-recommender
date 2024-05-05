@@ -1,11 +1,10 @@
 import streamlit as st
 import pickle
-from pandas.core.indexes.base import Index
+import pandas.core.indexes.base
 
 movies = pickle.load(open("movies.pkl", "rb"))
 similarity = pickle.load(open("similarity.pkl", "rb"))
 movie_list = movies["title"].values
-
 
 def recommend(movie_name):
     movie_index = movies[movies['title'] == movie_name].index[0]
