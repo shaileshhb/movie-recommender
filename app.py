@@ -1,8 +1,8 @@
 import streamlit as st
-import pickle
+import pandas as pd
 
-movies = pickle.load(open("movies.pkl", "rb"))
-similarity = pickle.load(open("similarity.pkl", "rb"))
+movies = pd.read_pickle(open("movies.pkl", "rb"))
+similarity = pd.read_pickle(open("similarity.pkl", "rb"))
 movie_list = movies["title"].values
 
 def recommend(movie_name):
