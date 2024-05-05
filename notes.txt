@@ -1,0 +1,36 @@
+CONTENT BASED RECOMMENDER SYSTEM
+
+to select columns to be kept for further analysis we should check if 
+the column can help us create a TAG's
+
+
+'budget', 'genres', 'homepage', 'id', 'keywords', 'original_language',
+       'original_title', 'overview', 'popularity', 'production_companies',
+       'production_countries', 'release_date', 'revenue', 'runtime',
+       'spoken_languages', 'status', 'tagline', 'title', 'vote_average',
+       'vote_count', 'movie_id', 'cast', 'crew'
+
+# columns which could be used
+genres
+movie_id
+keywords
+title
+overview*
+popularity^
+release_date** (think on how this column could be used after completion of project)
+cast
+crew*
+
+
+# text vectorization
+- convert tag (text) to vector using 'bag of words' technique
+- vector in mD space is a (x, y, ..., m) cordinate
+- do not consider stop words like the, in, to, is, etc
+
+# steming
+- if we have an list of string like ['love', 'loving', 'loved']
+  then the resultant list will be ['love','love','love']
+
+- euclidean distance fails as the dimensions are increased
+- in such case we can calculate cosine distance (theta between 2 vectors)
+- distance is inversly proportional to similarity
