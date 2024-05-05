@@ -17,7 +17,7 @@ def recommend(movie_name):
 
 
 st.header("Movie recommendations")
-selected_movie = st.selectbox(label="Movies", options=movie_list, placeholder="Select movie", index=None)
+selected_movie = st.selectbox(label="Movies", options=movie_list, index=None)
 
 if st.button(label="Recommend", help="Will recommend similar movies", type="secondary") and selected_movie != None:
     st.subheader("Recommended movies")
