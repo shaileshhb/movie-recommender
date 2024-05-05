@@ -1,8 +1,9 @@
 import streamlit as st
 import pickle
+from pandas.core.indexes.base import Index
 
-movies = pickle.read_pickle(open("movies.pkl", "rb"))
-similarity = pickle.read_pickle(open("similarity.pkl", "rb"))
+movies = pickle.load(open("movies.pkl", "rb"))
+similarity = pickle.load(open("similarity.pkl", "rb"))
 movie_list = movies["title"].values
 
 
